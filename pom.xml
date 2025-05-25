@@ -23,24 +23,25 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- JAX-RS (Jersey Implementation) -->
+        <!-- Jersey Core + Servlet Container -->
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
             <version>2.34</version>
         </dependency>
 
+        <!-- Jersey JSON con Jackson -->
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>
             <version>2.34</version>
         </dependency>
 
-        <!-- Gson for JSON (if preferred over Jackson) -->
+        <!-- 🔧 Jersey Dependency Injection (HK2) -->
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.10.1</version>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>2.34</version>
         </dependency>
 
         <!-- Oracle JDBC -->
@@ -48,6 +49,13 @@
             <groupId>com.oracle.database.jdbc</groupId>
             <artifactId>ojdbc8</artifactId>
             <version>19.3.0.0</version>
+        </dependency>
+
+        <!-- Gson (opcional) -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
         </dependency>
     </dependencies>
 

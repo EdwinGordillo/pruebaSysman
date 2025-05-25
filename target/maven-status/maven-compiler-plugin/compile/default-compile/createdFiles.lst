@@ -1,0 +1,4 @@
+com\tareas\utils\DBConnection.class
+com\tareas\api\TaskResource.class
+com\tareas\dao\TaskDAO.class
+com\tareas\model\Task.class
