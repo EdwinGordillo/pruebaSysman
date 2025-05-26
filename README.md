@@ -10,9 +10,13 @@ Los script's de PK y de tablas están en el archivo SQL.
 Apis;
 
 http://localhost:8080/taskmanager/api/tasks - POST - Creación
+
 http://localhost:8080/taskmanager/api/tasks/{ID} - PUT - Actualización
+
 http://localhost:8080/taskmanager/api/tasks - GET - Extraer todas
+
 http://localhost:8080/taskmanager/api/tasks/{ID} - GET - Extraer por ID
+
 http://localhost:8080/taskmanager/api/tasks/{ID} - DELETE - Elimina por ID
 
 Conexión a BD - URL: jdbc:oracle:thin:@192.168.1.147:1521:XE
