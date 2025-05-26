@@ -1,6 +1,7 @@
 # pruebaSysman
 
 ![image](https://github.com/user-attachments/assets/d11ef389-8bbf-4c25-b419-d2e1c82ef2d3)
+
 Se ejecutaron las pruebas correctamente usando apache-tomcat.
 ![image](https://github.com/user-attachments/assets/fe722de1-c0eb-4162-a4c8-bfe6abb6eef9)
 Las pruebas tuvieron un 100% de efectividad.
