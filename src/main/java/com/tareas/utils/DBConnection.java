@@ -11,7 +11,7 @@ public class DBConnection {
 
     public static Connection getConnection() throws SQLException {
         try {
-            Class.forName("oracle.jdbc.OracleDriver");  // Carga explícita del driver Oracle
+            Class.forName("oracle.jdbc.OracleDriver");
         } catch (ClassNotFoundException e) {
             throw new SQLException("No se pudo cargar el driver Oracle JDBC", e);
         }
