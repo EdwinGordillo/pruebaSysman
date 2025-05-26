@@ -18,7 +18,6 @@ public class TaskDAO {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall(sql)) {
 
-            // Registrar el parámetro de salida (el cursor)
             stmt.registerOutParameter(1, OracleTypes.CURSOR);
             stmt.execute();
 
@@ -47,9 +46,7 @@ public class TaskDAO {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall(sql)) {
 
-            // Registrar el parámetro de salida (el cursor)
             stmt.registerOutParameter(1, OracleTypes.CURSOR);
-            // Establecer el parámetro de entrada (ID)
             stmt.setInt(2, id);
 
             stmt.execute();
