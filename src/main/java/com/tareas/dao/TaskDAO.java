@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskDAO {
-
+    // Metodo que hace el llamado a la base de datos e invoca el procedimiento almacenado GET_ALL_TASKS
     public List<Task> getAllTasks() {
         List<Task> tasks = new ArrayList<>();
         String sql = "{ ? = call TASK_PKG.GET_ALL_TASKS() }";
@@ -38,7 +38,7 @@ public class TaskDAO {
         }
         return tasks;
     }
-
+    // Metodo que hace el llamado a la base de datos e invoca el procedimiento almacenado GET_TASK_BY_ID
     public Task getTaskById(int id) {
         Task task = null;
         String sql = "{ ? = call TASK_PKG.GET_TASK_BY_ID(?) }";
@@ -67,7 +67,7 @@ public class TaskDAO {
         }
         return task;
     }
-
+    // Metodo que hace el llamado a la base de datos e invoca el procedimiento almacenado CREATE_TASK
     public int createTask(Task task) {
         int id = -1;
         String sql = "{ call TASK_PKG.CREATE_TASK(?, ?, ?) }";
@@ -86,7 +86,7 @@ public class TaskDAO {
         }
         return id;
     }
-
+    // Metodo que hace el llamado a la base de datos e invoca el procedimiento almacenado UPDATE_TASK
     public void updateTask(Task task) {
         String sql = "{ call TASK_PKG.UPDATE_TASK(?, ?, ?, ?) }";
 
@@ -103,7 +103,7 @@ public class TaskDAO {
             e.printStackTrace();
         }
     }
-
+    // Metodo que hace el llamado a la base de datos e invoca el procedimiento almacenado DELETE_TASK
     public void deleteTask(int id) {
         String sql = "{ call TASK_PKG.DELETE_TASK(?) }";
 

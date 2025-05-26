@@ -2,6 +2,9 @@ package com.tareas.model;
 
 import java.sql.Timestamp;
 
+/**
+ * Clase que representa una tarea.
+ */
 public class Task {
     private int taskId;
     private String title;

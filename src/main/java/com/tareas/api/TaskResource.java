@@ -15,17 +15,20 @@ public class TaskResource {
     private final TaskDAO dao = new TaskDAO();
 
     @GET
+    //Extraer todos las tareas
     public List<Task> getAll() {
         return dao.getAllTasks();
     }
 
     @GET
     @Path("/{id}")
+    //Extraer una tarea por id
     public Task getById(@PathParam("id") int id) {
         return dao.getTaskById(id);
     }
 
     @POST
+    //Crear una nueva tarea
     public Response create(Task task) {
         int newId = dao.createTask(task);
         return Response.status(Response.Status.CREATED).entity(newId).build();
@@ -33,6 +36,7 @@ public class TaskResource {
 
     @PUT
     @Path("/{id}")
+    //Actualizar una tarea existente
     public Response update(@PathParam("id") int id, Task task) {
         task.setTaskId(id);
         dao.updateTask(task);
@@ -41,6 +45,7 @@ public class TaskResource {
 
     @DELETE
     @Path("/{id}")
+    //Eliminar una tarea por id
     public Response delete(@PathParam("id") int id) {
         dao.deleteTask(id);
         return Response.noContent().build();

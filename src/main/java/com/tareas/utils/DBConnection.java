@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Clase que maneja la conexión a la base de datos Oracle.
+ */
 public class DBConnection {
     private static final String URL = "jdbc:oracle:thin:@192.168.1.147:1521:XE";
     private static final String USER = "system";
